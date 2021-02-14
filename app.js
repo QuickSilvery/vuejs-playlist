@@ -1,5 +1,15 @@
 Vue.component('greeting', {
-    template: '<p>Hey there, I am a re-usable component</p>'
+    template: '<p>Hey there, I am a {{ name }}. <button v-on:click=changeName>Change name</button></p>',
+    data: function(){
+      return{
+        name: 'seppo'
+      }
+    },
+  methods: {
+    changeName: function(){
+      this.name = 'Jukka';
+    }
+  }
 });
 
 /* new Vue({
